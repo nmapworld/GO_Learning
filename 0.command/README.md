@@ -17,7 +17,7 @@ go run test.go
 go build test.go
 ```
 
-![image-20210610161252187](D:\GO\Learning\GO_Learning\command\1.png)
+![image-20210610161252187](https://github.com/nmapworld/GO_Learning/blob/main/0.command/1.png?raw=true)
 
 ## 3. clean
 
@@ -27,7 +27,7 @@ go build test.go
 go clean
 ```
 
-![image-20210610161334583](D:\GO\Learning\GO_Learning\command\3.png)
+![image-20210610161334583](https://github.com/nmapworld/GO_Learning/blob/main/0.command/3.png?raw=true)
 
 ## 4. env
 
@@ -37,7 +37,7 @@ go clean
 go env
 ```
 
-![image-20210610161745052](D:\GO\Learning\GO_Learning\command\4.png)
+![image-20210610161745052](https://github.com/nmapworld/GO_Learning/blob/main/0.command/4.png?raw=true)
 
 ## 5. fmt
 
@@ -47,7 +47,7 @@ go env
 go fmt test.go
 ```
 
-![image-20210610161554944](D:\GO\Learning\GO_Learning\command\5.png)
+![image-20210610161554944](https://github.com/nmapworld/GO_Learning/blob/main/0.command/5.png?raw=true)
 
 ## 6. get
 
@@ -65,5 +65,5 @@ go get https://github.com/lxn/walk
 go list
 ```
 
-![image-20210610161919061](D:\GO\Learning\GO_Learning\command\6.png)
+![image-20210610161919061](https://github.com/nmapworld/GO_Learning/blob/main/0.command/6.png?raw=true)
 
