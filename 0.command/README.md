@@ -7,7 +7,7 @@
 go run test.go
 ```
 
-![image-20210610161210700](D:\GO\Learning\GO_Learning\command\0.png)
+![image-20210610161210700](https://github.com/nmapworld/GO_Learning/blob/main/0.command/0.png?raw=true)
 
 ## 2. build
 
