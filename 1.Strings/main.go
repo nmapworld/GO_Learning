@@ -12,6 +12,8 @@ import (
 百分比
 */
 
+// 推荐使用变量命名：studentName
+
 func main() {
 	// 不推荐使用，后续版本可能取消
 	print("print\\n\n")
@@ -34,8 +36,9 @@ func main() {
 
 func MyInOut() {
 	// 交互式输入输出
-	var age int
-	var name string
+	var age int     //default 0
+	var name string //default ""
+	// var IsOK bool   //default false
 	// fmt.Print("请输出您的姓名：")
 	// fmt.Scanf("%s", &name)
 	// fmt.Print("请输出您的年龄：")
