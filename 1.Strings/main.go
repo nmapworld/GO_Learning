@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"strings"
+	"unicode/utf8"
 )
 
 /*
@@ -32,6 +34,10 @@ func main() {
 	// MyInOut()
 	MyData()
 	CreatData()
+	stringDo()
+	changeString()
+	learnQuer()
+	chineseLen()
 }
 
 func MyInOut() {
@@ -96,9 +102,94 @@ func CreatData() {
 	fmt.Print("Input your name:")
 	fmt.Scanf("%s", &name1)
 	if name1 == "Sherlock" {
-		fmt.Printf("Login Success")
+		fmt.Println("Login Success")
 	} else {
 		fmt.Println("Username Error!!")
 	}
+
+}
+
+func stringDo() {
+
+	name := "Sherlock"
+	goods := "dog"
+	// 字符串拼接
+	words := fmt.Sprintf("%s like %s", name, goods)
+	println(words)
+	// 字符串长度（包含空格）
+	println(len(words))
+	// 字符串切割
+	ret := strings.Split(words, "l")
+	fmt.Println(ret)
+	// 判断是否包含
+	ret1 := strings.Contains(words, "like")
+	fmt.Printf("%T\t", ret1)
+	fmt.Println(ret1)
+	// 前缀是否包含
+	fmt.Println(strings.HasPrefix(words, "S"))
+	// 后缀是否包含
+	fmt.Println(strings.HasSuffix(words, "S"))
+	// 判断字符第一次出现的位置
+	fmt.Println(strings.Index(words, "l"))
+	// 判断字符最后一次出现的位置
+	fmt.Println(strings.LastIndex(words, "l"))
+	// 列表拼接
+	fmt.Println(strings.Join(ret, "+"))
+}
+
+func changeString() {
+	// 字符串修改
+
+	s1 := "Hello world"
+	// (int8)英文字符串转为byte类型切片，才能修改
+	s2 := []byte(s1)
+	s2[3] = 'H'
+	fmt.Printf("%v\n", s1)
+	fmt.Printf("%c\n", s2)
+	//Byte类型字符串长度读取
+	fmt.Println(len(s1))
+	for i := 0; i < len(s2); i++ {
+		fmt.Printf("%c", s2[i])
+	}
+	fmt.Println(string(s2))
+	fmt.Println("\n------------")
+	n1 := "我的家在东北，松花江上SOHO"
+	// (utf-8)非ASCII字符串转为rune类型切片，才能修改
+	n2 := []rune(n1)
+	n2[0] = '你'
+	fmt.Println(n1)
+	//rune类型字符串长度读取
+	fmt.Println(len(n1))
+	fmt.Println(utf8.RuneCountInString(n1))
+	fmt.Printf("%c\n", n2)
+	for _, c := range n2 {
+		fmt.Printf("%c", c)
+	}
+	fmt.Println("\n------------")
+	fmt.Println(string(n2))
+
+}
+
+func learnQuer() {
+	// 打印不同变量的值和对应的类型
+	var (
+		n1   = 100
+		Pi   = 3.14151926
+		way  = false
+		str1 = "今天是个好日子"
+	)
+	fmt.Printf("%v的数据类型为:\t%T\n", n1, n1)
+	fmt.Printf("%v的数据类型为:\t%T\n", Pi, Pi)
+	fmt.Printf("%v的数据类型为:\t%T\n", way, way)
+	fmt.Printf("%v的数据类型为:\t%T\n", str1, str1)
+}
+
+func chineseLen() {
+
+	strin1 := "hello中国人"
+	fmt.Println(len(strin1))
+	fmt.Println(utf8.RuneCountInString(strin1))
+	num := len(strin1) - utf8.RuneCountInString(strin1)
+	fmt.Println(num / 2)
 
 }

@@ -9,7 +9,15 @@ func numList() {
 	// 	i = i + 1
 	// }
 	// 等同于
+	// i := 0
+	// for i < 10 {
+	// 	i++
+	// 	fmt.Printf("%d\t", i)
+	// }
+	// fmt.Println("")
+
 	fmt.Println("1-10")
+	// for 初始语句；条件语句；结束语句
 	for i := 1; i <= 10; i++ {
 		fmt.Printf("%d\t", i)
 	}
@@ -66,4 +74,32 @@ func daoxu() {
 	for i := 10; i > 0; i-- {
 		fmt.Printf("%d\t", i)
 	}
+	fmt.Println("")
+}
+
+func forRange() {
+	words1 := "HelloMM你好"
+	for i, v := range words1 {
+		fmt.Printf("%d\t%c", i, v)
+	}
+	fmt.Println("")
+	for _, v := range words1 {
+		fmt.Printf("%c", v)
+	}
+
+}
+
+func chengfabiao() {
+	fmt.Println("")
+	for i := 1; i < 10; i++ {
+		fmt.Println("")
+		for y := 1; y < 10; y++ {
+			if y <= i {
+				fmt.Printf("%d*%d=%d\t", y, i, i*y)
+
+			}
+			// fmt.Println("")
+		}
+	}
+
 }

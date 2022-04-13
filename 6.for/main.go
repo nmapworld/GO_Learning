@@ -7,5 +7,8 @@ func main() {
 	gustNum()
 	sumNum()
 	daoxu()
+	forRange()
+	chengfabiao()
 	paichu()
+	duoFor()
 }
