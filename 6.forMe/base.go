@@ -61,7 +61,7 @@ func gustNum() {
 }
 
 func sumNum() {
-	fmt.Print("1-100累加和为：")
+	fmt.Print("1-100累加和为:")
 	sum := 0
 	for i := 1; i <= 100; i++ {
 		sum += i

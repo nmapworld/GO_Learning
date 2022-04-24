@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // for 循环跳出方式
 // continue & break & goto & return & panic
