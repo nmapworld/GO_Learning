@@ -2,11 +2,13 @@ package main
 
 import "fmt"
 
-// 函数格式
-// func 函数名（参数）（返回值）{
+// Format：
+// func 函数名（参数 参数类型）（返回值 返回值类型）{
 // 函数体
 // }
-// 一段代码的封装，方便重复调用，查看时更简洁清晰
+
+// 函数为一段代码的封装，方便重复调用，查看时更简洁清晰
+// 函数是一种类型，可以作为参数，也可以作为返回值
 
 // 定义加法函数
 func sum(x int, y int) (result int) {
@@ -14,7 +16,7 @@ func sum(x int, y int) (result int) {
 }
 
 // 有参数,没有返回值的函数
-// 参数相同时，可以简写为
+// 参数类型相同时，可以简写为
 // func  f1(x,y int)
 // 同理f1(x,y int,m n string,i,o bool)
 func f1(x int, y int) {
@@ -54,6 +56,14 @@ func f6(x string, y ...int) {
 
 }
 
+//多个返回值
+func f7(x, y int) (z, w int) {
+	fmt.Printf("x=%d,y=%d\n", x, y)
+	z = x + y
+	w = x - y
+	return
+}
+
 // GO语言中没有默认参数概念
 
 func main() {
@@ -65,5 +75,19 @@ func main() {
 
 	f6("下雨了", 5, 5, 5, 55)
 	// fmt.Println()
+	fmt.Println(f7(9, 5))
+
+	defer1()
+	fmt.Println(defer2(5))
+	fmt.Println(defer3())
+	fmt.Println(defer4())
+	fmt.Println(defer5())
+
+	fmt.Printf("%T\n", advF1)
+	fmt.Printf("%T\n", advF2)
+
+	advF3(advF2)
+
+	advF4(advF2)
 
 }

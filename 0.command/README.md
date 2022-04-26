@@ -9,7 +9,7 @@
 go run test.go
 ```
 
-![](0.png)
+![](images/0.png)
 
 ### 2. build
 
@@ -19,7 +19,7 @@ go run test.go
 go build test.go
 ```
 
-![](1.png)
+![](images/1.png)
 
 ### 3. clean
 
@@ -29,7 +29,7 @@ go build test.go
 go clean
 ```
 
-![](3.png)
+![](images/3.png)
 
 ### 4. env
 
@@ -39,7 +39,7 @@ go clean
 go env
 ```
 
-![](4.png)
+![](images/4.png)
 
 ### 5. fmt
 
@@ -49,7 +49,7 @@ go env
 go fmt test.go
 ```
 
-![](5.png)
+![](images\5.png)
 
 ### 6. get
 
@@ -67,7 +67,7 @@ go get https://github.com/lxn/walk
 go list
 ```
 
-![](6.png)
+![](images/6.png)
 
 ## 二、set
 
@@ -95,6 +95,19 @@ go env -w set GOPATH=C:\Users\Administrator\go
 go init 目录
 ```
 
+### 5.Build Other OpPacket
+MAC:
+```bash
+
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
+CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build
+```
+Build Option:
+```bash
+go build -buildvcs=false    //关闭VCS信息
+go build -ldflags="-w -s"   //去除调试信息
+```
 ## 三. 基础知识
 ```go
 // 当前程序的包名
@@ -171,7 +184,7 @@ var s1:=[]int
 s1=[]int{1,2,3}  //初始化1
 s2:=make([]bool,2,4) //初始化2.定义长度2，容量4
 ```
-![s1=a[0:4]](7.png)
+![s1=a[0:4]](images/7.png)
 扩容策略：
 切片追加元素,当本身切片固定容量存储不下时:
 
@@ -219,6 +232,12 @@ func main() {
 ```
 
 ### 6. 函数（func)
+
+```go
+func 函数名（参数 参数类型）（返回值 返回值类型）{
+函数体
+}
+```
 ### 7. 结构体(struct)
 
 
