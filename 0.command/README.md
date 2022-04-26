@@ -8,8 +8,7 @@
 ```go
 go run test.go
 ```
-
-![](images/0.png)
+![](https://raw.githubusercontent.com/nmapworld/GO_Learning/main/0.command/images/0.png)
 
 ### 2. build
 
@@ -19,7 +18,7 @@ go run test.go
 go build test.go
 ```
 
-![](images/1.png)
+![](https://raw.githubusercontent.com/nmapworld/GO_Learning/main/0.command/images/1.png)
 
 ### 3. clean
 
@@ -29,7 +28,7 @@ go build test.go
 go clean
 ```
 
-![](images/3.png)
+![](https://raw.githubusercontent.com/nmapworld/GO_Learning/main/0.command/images/3.png)
 
 ### 4. env
 
@@ -39,7 +38,7 @@ go clean
 go env
 ```
 
-![](images/4.png)
+![](https://raw.githubusercontent.com/nmapworld/GO_Learning/main/0.command/images/4.png)
 
 ### 5. fmt
 
@@ -49,7 +48,7 @@ go env
 go fmt test.go
 ```
 
-![](images\5.png)
+![](https://raw.githubusercontent.com/nmapworld/GO_Learning/main/0.command/images/5.png)
 
 ### 6. get
 
@@ -67,7 +66,7 @@ go get https://github.com/lxn/walk
 go list
 ```
 
-![](images/6.png)
+![](https://raw.githubusercontent.com/nmapworld/GO_Learning/main/0.command/images/6.png)
 
 ## 二、set
 
@@ -95,8 +94,7 @@ go env -w set GOPATH=C:\Users\Administrator\go
 go init 目录
 ```
 
-### 5.Build Other OpPacket
-MAC:
+### 5.Build
 ```bash
 
 CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
@@ -184,7 +182,7 @@ var s1:=[]int
 s1=[]int{1,2,3}  //初始化1
 s2:=make([]bool,2,4) //初始化2.定义长度2，容量4
 ```
-![s1=a[0:4]](images/7.png)
+![s1=a[0:4]](https://raw.githubusercontent.com/nmapworld/GO_Learning/main/0.command/images/7.png)
 扩容策略：
 切片追加元素,当本身切片固定容量存储不下时:
 
