@@ -83,11 +83,25 @@ func main() {
 	fmt.Println(defer4())
 	fmt.Println(defer5())
 
+	fmt.Println("Que")
+	Que()
+
 	fmt.Printf("%T\n", advF1)
 	fmt.Printf("%T\n", advF2)
 
 	advF3(advF2)
 
 	advF4(advF2)
+
+	// 匿名函数，不声明函数名
+	// 仅调用一次时，也可写为匿名函数
+	func(x, y int) {
+		fmt.Println(x + y)
+		fmt.Println("Hello world")
+	}(10, 20)
+
+	main2()
+
+	main3()
 
 }
