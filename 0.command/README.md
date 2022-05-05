@@ -108,10 +108,10 @@ go build -ldflags="-w -s"   //去除调试信息
 ```
 ## 三. 基础知识
 ```go
-// 当前程序的包名
+// 包声明
 package main
 
-// 导入其他的包
+// 引入包
 import "fmt"
 
 // 定义常量

@@ -1,5 +1,5 @@
 # GO_Learning
-   Myself notebooks for GO
+   Myself notebooks for GOlang
 
 
 
