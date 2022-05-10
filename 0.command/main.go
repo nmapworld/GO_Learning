@@ -4,8 +4,8 @@ package main
 // 导入其他的包
 import "fmt"
 
-// 定义常量
-const PI = 3.1415
+// 声明常量
+const Pi = 3.1415
 
 // 变量声明和赋值
 var str = "Hello世界"

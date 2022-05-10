@@ -26,5 +26,4 @@ func main() {
 	)
 	fmt.Printf("n1:%T\tn1:%T\tn3:%T\n", n1, n2, n3)
 	fmt.Printf("n1:%v\tn1:%v\tn3:%v\n", n1, n2, n3)
-
 }

@@ -26,5 +26,6 @@ func main() {
 	for _, c := range stringMy {
 		fmt.Printf("%T\t", c)
 		fmt.Printf("%c\t", c)
+		fmt.Println()
 	}
 }

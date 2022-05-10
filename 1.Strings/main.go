@@ -38,6 +38,10 @@ func main() {
 	changeString()
 	learnQuer()
 	chineseLen()
+
+	boolOp()
+
+	logic()
 }
 
 func MyInOut() {
@@ -192,4 +196,17 @@ func chineseLen() {
 	num := len(strin1) - utf8.RuneCountInString(strin1)
 	fmt.Println(num / 2)
 
+}
+
+func boolOp() {
+	a, b := 3, 4
+	r1, r2, r3, r4 := a == b, a != b, a > b, a < b
+	fmt.Printf("%v:%T\t%v:%T\t%v:%T\t%v:%T\t\n", r1, r1, r2, r2, r3, r3, r4, r4)
+}
+
+func logic() {
+	yes, no := true, false
+	r1, r2, r3 := yes && yes, yes || no, !no
+	fmt.Printf("%v:%T\t%v:%T\t%v:%T\t\n", r1, r1, r2, r2, r3, r3)
+	// true:bool       true:bool       true:bool
 }

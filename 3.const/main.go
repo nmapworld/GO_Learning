@@ -26,35 +26,35 @@ const (
 )
 
 const (
-	b1 = iota
-	b2
-	_ //丢弃赋值
-	b3
-	b4
+	b1 = iota //0
+	b2        //1
+	_         //丢弃赋值
+	b3        //3
+	b4        //4
 )
 
 // const中每新增一行，则计数一次
 const (
-	c1 = iota
-	c2 = 100 //破坏累加队形
-	c3 = iota
-	c4
+	c1 = iota //0
+	c2 = 100  //破坏累加队形
+	c3 = iota //2
+	c4        //3
 )
 
 // const多列声明
 const (
-	d1, d2 = iota + 1, iota + 2
-	d3, d4 = iota + 1, iota + 2
+	d1, d2 = iota + 1, iota + 2 //1,2
+	d3, d4 = iota + 1, iota + 2 //2,3
 )
 
 // 定义存储单位
 const (
-	_  = iota
-	KB = 1 << (10 * iota)
-	MB
-	GB
-	TB
-	PB
+	_  = iota             //0
+	KB = 1 << (10 * iota) //1*2^(10*1)=1024
+	MB                    //1*2^(10*2)=1048576
+	GB                    //1*2^(10*3)=1073741824
+	TB                    //1*2^(10*4)=1099511627776
+	PB                    //1*2^(10*5)=1125899906842624
 )
 
 func main() {
@@ -66,4 +66,5 @@ func main() {
 	fmt.Println(c1, c2, c3, c4)
 	fmt.Println(d1, d2, d3, d4)
 	fmt.Println(KB, MB, GB, TB, PB)
+	// fmt.Printf("a1", &a2) //数字常量不会分配存储空间，因此无法获取内存地址
 }
