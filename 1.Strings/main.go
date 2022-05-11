@@ -124,7 +124,7 @@ func stringDo() {
 	println(len(words))
 	// 字符串切割
 	ret := strings.Split(words, "l")
-	fmt.Println(ret)
+	fmt.Printf("%#v %T\n", ret, ret)
 	// 判断是否包含
 	ret1 := strings.Contains(words, "like")
 	fmt.Printf("%T\t", ret1)
