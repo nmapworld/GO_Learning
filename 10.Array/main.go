@@ -87,5 +87,26 @@ func arrayList() {
 	slice_append()
 	slice_copy()
 	slice_del()
-	
+	arrayOp()
+	sortArray()
+	changeSlice()
+
+}
+
+func arrayOp() {
+	arr1 := [3]int{1, 2, 3}
+	arr2 := [3]int{1, 2, 1}
+	arr3 := arr2
+	arr3[2] = 3
+	fmt.Println(arr1, arr2, arr3) //[1 2 3] [1 2 1] [1 2 3]
+	fmt.Println(arr1 == arr2)     //false
+	fmt.Println(arr1 != arr2)     //true
+	fmt.Println(arr1 == arr3)     //true
+}
+
+func changeSlice() {
+
+	slice4 := []int{1, 2, 3, 4}
+	slice4[0] = 6
+	fmt.Println(slice4) //[6 2 3 4]
 }

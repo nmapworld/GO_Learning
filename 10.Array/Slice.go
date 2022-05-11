@@ -24,6 +24,25 @@ func sliceMy() {
 
 	e1 := []int{1, 3, 5}
 	e2 := e1
-	fmt.Println(e1, e2)
+	e2[0] = 5
+	fmt.Println(e1, e2) //[5 3 5] [5 3 5]
 
+	var slice1 []int
+	if len(slice1) == 0 {
+		fmt.Println("slice1 is Null")
+		slice1 = make([]int, 10)
+		fmt.Printf("%#v %p \n", slice1, &slice1)
+		// []int{0, 0, 0, 0, 0, 0, 0, 0, 0, 0} 0xc00000c108
+	}
+	fmt.Printf("%#v %p \n", slice1, &slice1)
+	// []int{0, 0, 0, 0, 0, 0, 0, 0, 0, 0} 0xc00000c108
+
+	slice2 := make([]bool, 6)
+	if len(slice2) == 0 {
+		fmt.Println("slice1 is Null")
+		slice2 = make([]bool, 10)
+		fmt.Printf("%#v %p \n", slice2, &slice2)
+	}
+	fmt.Printf("%#v %p \n", slice2, &slice2)
+	// []bool{false, false, false, false, false, false} 0xc0000a4108
 }
