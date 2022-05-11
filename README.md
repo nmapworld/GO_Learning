@@ -9,3 +9,6 @@
 [3.data_type.md](3.data_type.md): 数据类型  
 [4.operator.md](4.operator.md): 运算符  
 [5.process_control.md](5.process_control.md): 流程控制  
+[6.array.md](6.array.md): 数组  
+[7.slice.md](7.slice.md): 切片  
+[8.map.md](8.map.md): 字典  
