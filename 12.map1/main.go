@@ -1,6 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
+
+func sortMap() {
+	map2 := map[int]string{
+		2: "小红",
+		1: "小明",
+		8: "小龙",
+		3: "小青",
+	}
+	var nums []int //用来存放学号
+	for num := range map2 {
+		nums = append(nums, num)
+	}
+	sort.Ints(nums)
+	for _, num := range nums {
+		fmt.Printf("学号:%d\t姓名:%s\n", num, map2[num])
+
+	}
+
+}
 
 func main() {
 	// map类型
@@ -39,4 +61,7 @@ func main() {
 	fmt.Println("map删除键值对")
 	delete(m1, "身高")
 	fmt.Println(m1)
+
+	sortMap()
+
 }

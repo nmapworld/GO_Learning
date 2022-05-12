@@ -11,18 +11,18 @@ func main() {
 	}
 	map1[0] = "小明"
 	map1[2] = "小花"
-	fmt.Println(map1)
+	fmt.Println(map1) ////map[0:小明 2:小花]
 	// 根据key，查找value，如果不存在返回对应类型的零值
-	fmt.Println(map1[0])
+	fmt.Println(map1[0]) //小明
 	value, ok := map1[1]
 	if !ok {
-		fmt.Println("未寻找到map对应的key")
+		fmt.Println("未寻找到map对应的key") //未寻找到map对应的key
 	} else {
 		fmt.Println(value)
 	}
 
 	// delete,若delete的对象的key不存在，则Nothing to do
 	delete(map1, 0)
-	fmt.Println(map1)
+	fmt.Println(map1) //map[2:小花]
 
 }
