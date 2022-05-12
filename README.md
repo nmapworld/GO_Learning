@@ -1,8 +1,6 @@
 # GO_Learning
    Myself notebooks for GOlang
 
-## files & include
-
 >入门：
 >>[0.command](0.command.md): 包含go学习需要使用到的命令  
 
