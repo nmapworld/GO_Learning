@@ -10,6 +10,19 @@ type person struct {
 	hobby []string
 }
 
+type books struct {
+	title   string
+	author  string
+	subject string
+	book_id int
+}
+
+// 结构体匿名字段
+type nofiled struct {
+	string
+	int
+}
+
 // 构造函数1
 type person4 struct {
 	name string
@@ -56,9 +69,34 @@ func main() {
 	structDuo()
 
 	// 继承
-
 	jicheng()
 
 	// json
 	jsonM()
+
+	var book1 books
+	book1.subject = "go语言教程"
+	book1.author = "gopher"
+	book1.title = "GO语言"
+	book1.book_id = 1
+
+	book2 := books{
+		subject: "Python",
+		author:  "Pythor",
+		title:   "Python语言",
+		book_id: 2,
+	}
+	fmt.Println(book1.book_id, book1.subject, book1.author, book1.title) //1 go语言教程 gopher GO语言
+	fmt.Println(book2.book_id, book2.subject, book2.author, book2.title) //2 Python Pythor Python语言
+
+	func(book1, book2 *books) {
+		fmt.Println(book1.book_id, book1.subject, book1.author, book1.title) //1 go语言教程 gopher GO语言
+		fmt.Println(book2.book_id, book2.subject, book2.author, book2.title) //2 Python Pythor Python语言
+	}(&book1, &book2)
+
+	filed1 := nofiled{
+		"Hello",
+		18,
+	}
+	fmt.Printf("%v %T\n", filed1, filed1)
 }

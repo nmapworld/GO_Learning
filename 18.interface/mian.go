@@ -70,5 +70,6 @@ func main() {
 	interfaceNull()
 
 	type_duanyan()
+	// interfaceDuo()
 
 }

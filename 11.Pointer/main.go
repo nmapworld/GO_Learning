@@ -21,10 +21,11 @@ func main() {
 	str3 := str2
 	str4 := &str2
 	fmt.Printf("str2:内存地址为：%x;\tstr3:内存地址为：%x;\tstr4:值为：%s\n", &str2, &str3, *str4)
-
 	runModify()
 
 	new_pointer()
+
+	modityslice()
 }
 
 func modify1(x int) {
@@ -46,4 +47,17 @@ func runModify() {
 	// ???
 	fmt.Println(a)
 
+}
+
+func modityslice() {
+	slice := []int{10, 100, 200}
+	var ptr [3]*int //存放指针的切片
+	// fmt.Println(slice)
+	for i := 0; i < len(slice); i++ { //遍历切片
+		ptr[i] = &slice[i] //将切片中元素对应的内存地址赋值给ptr中
+	}
+	for _, v := range ptr { //遍历ptr中的内存地址元素
+		fmt.Printf("%d\t", *v) //根据内存地址打印对应的值
+	}
+	fmt.Println()
 }

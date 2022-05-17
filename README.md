@@ -16,8 +16,12 @@
 [7.slice.md](7.slice.md): 切片  
 [8.map.md](8.map.md): 字典  
 [9.pointer.md](9.pointer.md): 指针  
-[10.func.md](10.func.md): 函数
-
+[10.func.md](10.func.md): 函数  
+[11.struct.md](11.struct.md): 结构体  
+[12.method.md](12.method.md): 方法  
+[13.interface.md](13.interface.md): 接口  
+[14.resver.md](14.resver.md)： 反射  
+[15.error.md](15.error.md)： 错误  
 
 >并发
 >>

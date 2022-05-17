@@ -36,6 +36,13 @@ func (c *cat) eat(food string) {
 
 }
 
-func interfaceDuo() {
+func mover1(x mover) {
+	x.move()
 
+}
+
+func interfaceDuo() {
+	var c1 animail
+	c1.eat("虫子")
+	c1.move()
 }

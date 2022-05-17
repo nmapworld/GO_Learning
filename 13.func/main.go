@@ -53,7 +53,6 @@ func f5() (int, string) {
 func f6(x string, y ...int) {
 	fmt.Println(x)
 	fmt.Println(y) //返回的类型的slice []int
-
 }
 
 //多个返回值
@@ -75,7 +74,8 @@ func main() {
 
 	f6("下雨了", 5, 5, 5, 55)
 	// fmt.Println()
-	fmt.Println(f7(9, 5))
+	sum, sub := f7(9, 5)
+	fmt.Println(sum, sub) //14 4
 
 	defer1()
 	fmt.Println(defer2(5))

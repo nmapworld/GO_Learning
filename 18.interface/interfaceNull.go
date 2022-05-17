@@ -13,8 +13,8 @@ func show(a interface{}) {
 }
 
 func interfaceNull() {
-	var m1 map[string]interface{}
-	m1 = make(map[string]interface{}, 16)
+	// var m1 map[string]interface{}
+	m1 := make(map[string]interface{}, 16)
 	fmt.Printf("%T\n", m1)
 	m1["name"] = "chou"
 	m1["age"] = 18

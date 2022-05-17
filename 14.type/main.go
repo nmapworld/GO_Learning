@@ -14,11 +14,11 @@ type youInt = int //类型别用
 func main() {
 	var n myInt
 	n = 100
-	fmt.Printf("%d的类型为%T\n", n, n)
+	fmt.Printf("%d的类型为%T\n", n, n) // 100的类型为main.myInt
 	var m youInt
 	m = 1000
-	fmt.Printf("%d的类型为%T\n", m, m)
+	fmt.Printf("%d的类型为%T\n", m, m) // 1000的类型为int
 	var c rune
 	c = '名'
-	fmt.Printf("%c 的类型为%T\n", c, c)
+	fmt.Printf("%c的类型为%T\n", c, c) // 名的类型为int32
 }

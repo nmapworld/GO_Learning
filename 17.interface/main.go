@@ -13,11 +13,6 @@ import "fmt"
 // 	...
 // }
 
-type voiceTest interface {
-	// 掉用不同方法下的
-	voice()
-}
-
 // 定义结构体
 type cat struct {
 }
@@ -34,6 +29,11 @@ func (d dog) voice() {
 	fmt.Println("汪汪汪")
 }
 
+type voiceTest interface {
+	// 掉用不同方法下的
+	voice()
+}
+
 // 不同方法，调用接口
 func pick(x voiceTest) {
 	// 接受一个参数，传入动物
@@ -46,7 +46,5 @@ func main() {
 
 	pick(c1)
 	pick(d1)
-
-	// model()
 
 }

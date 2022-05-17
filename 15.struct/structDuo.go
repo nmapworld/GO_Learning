@@ -30,5 +30,14 @@ func structDuo() {
 	}
 	fmt.Println(t1)
 	fmt.Println(t1.some.name, t1.some.address)
+	p2 := people{
+		sex: "man",
+		some: same{
+			name:    "小明",
+			age:     18,
+			address: "北京东路",
+		},
+	}
+	fmt.Println(p2)
 
 }
